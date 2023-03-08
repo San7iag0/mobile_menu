@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Euclid Circular A", Poppins;
   color: #f9f9f9;
@@ -16,6 +20,9 @@ button {
 .background {
   position: fixed;
 }
+.h1{
+  color: white;
+}
 
 .background {
   z-index: 1;
@@ -23,7 +30,7 @@ button {
   left: -10%;
   width: 120%;
   height: 120%;
-  background-image: url("assets/galaxy.jpg");
+  background-image: url("assets/bg.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 80%;
@@ -55,13 +62,13 @@ body.open .background {
   place-items: center;
   width: 88px;
   height: 88px;
-  background-image: url("./assets/galaxy.jpg");
+  background-image: url("./assets/menu.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
 body.open .navbar-burger {
-  background-image: url("./assets/galaxy.jpg");
+  background-image: url("./assets/close.svg");
 }
 
 .menu {
