@@ -3,24 +3,26 @@ import './App.css';
 
 function App() {
 
-  const [ active, serActive ] = useState(false);
   const url = ''
+  const [active, serActive] = useState(false);
+
   const toggleMenu = () => {
-    serActive(!active);
-  //   document.body.classNameList.toggle('open');
+      serActive(!active);
   }
+
   return (
-    <div className='parent'>
+    <div className=''>
       <div className="background"></div>
-      <button className="navbar-burger" onClick={toggleMenu}></button>
-      <div id='container' className={`container${active ? 'open': ''}`}>
-        <nav>
-          <a href={url} style = {{animationDelay: "0.1s"}}>About</a>
-          <a href={url} style = {{animationDelay: "0.2s"}}>Portfolio</a>
-          <a href={url} style = {{animationDelay: "0.3s"}}>Services</a>
-          <a href={url} style = {{animationDelay: "0.5s"}}>Contact</a>
-        </nav>
-      </div>
+      <body className={( active ? 'open' : '' )}>
+      <button className="navbar-burger" onClick={toggleMenu} ></button>
+        <div className="menu">
+          <nav>
+            <a href={url} > About </a>
+            <a href={url} > Portfolio </a>
+          </nav>
+        </div>
+
+      </body>
     </div>
   );
 }
