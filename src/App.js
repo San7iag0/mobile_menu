@@ -7,23 +7,21 @@ function App() {
   const [active, serActive] = useState(false);
 
   const toggleMenu = () => {
-      serActive(!active);
+    serActive(!active);
   }
 
   return (
-    <div className=''>
-      <div className="background"></div>
-      <body className={( active ? 'open' : '' )}>
-      <button className="navbar-burger" onClick={toggleMenu} ></button>
-        <div className="menu">
-          <nav>
-            <a href={url} > About </a>
-            <a href={url} > Portfolio </a>
-          </nav>
-        </div>
 
-      </body>
-    </div>
+    <body className={(active ? 'open' : '')}>
+      <div className="background"></div>
+      <button className="navbar-burger" onClick={toggleMenu} ></button>
+      <div className="menu">
+        <nav>
+          <a href={url} > About </a>
+          <a href={url} > Portfolio </a>
+        </nav>
+      </div>
+    </body>
   );
 }
 
